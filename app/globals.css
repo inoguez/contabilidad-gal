@@ -2,28 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    color-scheme: light dark;
+    --vermilion-50: 23deg 100% 96%;
+    --vermilion-100: 25deg 100% 92%;
+    --vermilion-200: 22deg 100% 83%;
+    --vermilion-300: 21deg 100% 72%;
+    --vermilion-400: 17deg 100% 61%;
+    --vermilion-500: 14deg 100% 57%;
+    --vermilion-600: 10deg 95% 48%;
+    --vermilion-700: 7deg 93% 40%;
+    --vermilion-800: 5deg 84% 34%;
+    --vermilion-900: 5deg 79% 28%;
+    --vermilion-950: 3deg 86% 15%;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    --mountain-mist-50: 0deg 0% 96%;
+    --mountain-mist-100: 0deg 0% 91%;
+    --mountain-mist-200: 0deg 0% 82%;
+    --mountain-mist-300: 0deg 0% 69%;
+    --mountain-mist-400: 0deg 0% 57%;
+    --mountain-mist-500: 0deg 0% 43%;
+    --mountain-mist-600: 0deg 0% 36%;
+    --mountain-mist-700: 0deg 0% 31%;
+    --mountain-mist-800: 0deg 0% 27%;
+    --mountain-mist-900: 0deg 0% 24%;
+    --mountain-mist-950: 0deg 0% 15%;
+  }
 }
 
 @layer utilities {
