@@ -2,7 +2,7 @@ import { ContactButton } from './ContactButton';
 
 export const Hero = () => {
   return (
-    <section className='flex  items-center justify-center flex-1 p-5'>
+    <section className='flex  items-center justify-center flex-1 '>
       <div className='flex flex-col gap-2 flex-1 items-center text-balance text-center'>
         <h1 className='text-7xl font-semibold'>
           Simplifica tu gestión financiera
