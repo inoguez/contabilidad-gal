@@ -4,7 +4,90 @@
 
 @layer base {
   :root {
-    color-scheme: light dark;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    /* color-scheme: light dark; */
+    --vermilion-50: 23deg 100% 96%;
+    --vermilion-100: 25deg 100% 92%;
+    --vermilion-200: 22deg 100% 83%;
+    --vermilion-300: 21deg 100% 72%;
+    --vermilion-400: 17deg 100% 61%;
+    --vermilion-500: 14deg 100% 57%;
+    --vermilion-600: 10deg 95% 48%;
+    --vermilion-700: 7deg 93% 40%;
+    --vermilion-800: 5deg 84% 34%;
+    --vermilion-900: 5deg 79% 28%;
+    --vermilion-950: 3deg 86% 15%;
+
+    --mountain-mist-50: 0deg 0% 96%;
+    --mountain-mist-100: 0deg 0% 91%;
+    --mountain-mist-200: 0deg 0% 82%;
+    --mountain-mist-300: 0deg 0% 69%;
+    --mountain-mist-400: 0deg 0% 57%;
+    --mountain-mist-500: 0deg 0% 43%;
+    --mountain-mist-600: 0deg 0% 36%;
+    --mountain-mist-700: 0deg 0% 31%;
+    --mountain-mist-800: 0deg 0% 27%;
+    --mountain-mist-900: 0deg 0% 24%;
+    --mountain-mist-950: 0deg 0% 15%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    /* color-scheme: light dark; */
     --vermilion-50: 23deg 100% 96%;
     --vermilion-100: 25deg 100% 92%;
     --vermilion-200: 22deg 100% 83%;
@@ -31,8 +114,21 @@
   }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+body {
+  color: hsl(var(--vermilion-100));
+  overflow-x: hidden;
+  text-wrap: balance;
 }
