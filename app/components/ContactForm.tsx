@@ -42,18 +42,21 @@ export default function ContactForm() {
       lastName: '',
       email: '',
     },
+    mode: 'onChange',
   });
   console.log(form.formState.errors);
   useEffect(() => {
     const errors = form?.formState?.errors;
     const keys = Object.keys(errors);
     if (errors) {
-      keys.map((e: any) => {
-        toast.warning('Advertencia', { description: errors[e].message });
+      keys.map((e) => {
+        toast.warning('Advertencia', {
+          description: (errors as any)[e].message,
+        });
       });
     }
   }, [form?.formState?.errors]);
-  const handleSubmit = () => {
+  const onSubmit = () => {
     console.log('aaa');
   };
   return (
@@ -65,14 +68,13 @@ export default function ContactForm() {
       <CardContent>
         <Form {...form}>
           <form
-            action=''
-            onSubmit={form.handleSubmit(handleSubmit)}
+            onSubmit={form.handleSubmit(onSubmit)}
             className='max-w-md w-full flex flex-col gap-4'
           >
             <FormField
               control={form.control}
               name='name'
-              render={(field) => {
+              render={({ field }) => {
                 return (
                   <FormItem>
                     <FormLabel>Nombre completo</FormLabel>
@@ -92,7 +94,7 @@ export default function ContactForm() {
             <FormField
               control={form.control}
               name='lastName'
-              render={(field) => {
+              render={({ field }) => {
                 return (
                   <FormItem>
                     <FormLabel>Apellido</FormLabel>
@@ -112,7 +114,7 @@ export default function ContactForm() {
             <FormField
               control={form.control}
               name='email'
-              render={(field) => {
+              render={({ field }) => {
                 return (
                   <FormItem>
                     <FormLabel>Correo electrónico</FormLabel>
