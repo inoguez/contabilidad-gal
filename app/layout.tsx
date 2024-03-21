@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'bg-gradient-to-l from-slate-950  to-mountain-mist-950  !p-4 flex flex-col gap-1 min-h-screen',
+          'bg-gradient-to-l from-slate-950  to-mountain-mist-950   flex flex-col gap-1 min-h-screen',
           poppins.className
         )}
       >

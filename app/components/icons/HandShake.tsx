@@ -11,6 +11,8 @@ export default function HandShake({ ...props }) {
       stroke-linecap='round'
       stroke-linejoin='round'
       className='lucide lucide-heart-handshake  text-vermilion-500'
+      width={'100%'}
+      height={'100%'}
       {...props}
     >
       <motion.path

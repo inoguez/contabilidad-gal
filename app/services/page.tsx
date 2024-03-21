@@ -32,17 +32,21 @@ export default function page() {
       >
         {SERVICES.map((e) => (
           <motion.article
+            transition={{
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
             variants={item}
             key={e.id}
-            className='grid  gap-3 items-start grid-rows-[auto_auto_170px_1fr_auto]   justify-center border-[1px] p-4 rounded-lg border-mountain-mist-900'
+            className='grid  gap-2 items-start grid-rows-[auto_auto_auto_1fr_auto]   justify-center border-[1px] p-4 rounded-lg border-mountain-mist-900'
           >
             <e.Icon size={128} className='self-center place-self-center ' />
             {/* <Human /> */}
             <h3 className='text-3xl font-semibold self-center place-self-center text-vermilion-400'>
               {e.title}
             </h3>
-            <p className='font-normal'>{e.description}</p>
-            <ul className='list-outside px-2'>
+            <p className='font-normal overflow-hidden'>{e.description}</p>
+            <ul className='list-outside px-2 self-start'>
               <h4 className='text-center font-semibold text-lg my-2'>
                 Características
               </h4>
