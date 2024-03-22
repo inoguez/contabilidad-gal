@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import ContactForm from '../components/ContactForm';
 import { Nfc } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 export default function page() {
   return (
     <main className=' container mx-auto max-w-4xl py-4 grow grid md:grid-cols-2 gap-4 justify-center items-start'>

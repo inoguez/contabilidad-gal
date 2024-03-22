@@ -17,7 +17,7 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    id: 'account',
+    id: 'Contable',
     Icon: HandCoins,
     title: 'Contables',
     description:
@@ -30,7 +30,7 @@ export const SERVICES = [
     ],
   },
   {
-    id: 'fiscal',
+    id: 'Fiscal',
     Icon: Landmark,
     title: 'Fiscales',
     description:
@@ -43,7 +43,7 @@ export const SERVICES = [
     ],
   },
   {
-    id: 'finance',
+    id: 'Financiero',
     Icon: BadgeDollarSign,
     title: 'Financieros',
     description:
@@ -56,7 +56,7 @@ export const SERVICES = [
     ],
   },
   {
-    id: 'rh',
+    id: 'Recursos Humanos',
     Icon: PersonStanding,
     title: 'Recursos Humanos',
     description:
