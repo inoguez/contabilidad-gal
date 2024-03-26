@@ -13,7 +13,7 @@ export default function page() {
           duration: 0.8,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className='h-full flex flex-col gap-4 border-[1px] border-mountain-mist-900 p-10 rounded-lg text-xl font-normal'
+        className='h-full flex flex-col gap-4 border-[1px] border-mountain-mist-500 p-10 rounded-lg text-xl font-normal'
       >
         <h1 className='font-semibold text-4xl'>Nosotros</h1>
         <p className='whitespace-pre-line'>{SPEECH_ABOUT}</p>
@@ -27,7 +27,7 @@ export default function page() {
         }}
         className='grid grid-rows-[auto_1fr]  gap-4 row-start-1 md:col-start-2 h-full'
       >
-        <div className='grid place-content-center border-[1px] border-mountain-mist-900 p-4 rounded-lg aspect-square'>
+        <div className='grid place-content-center border-[1px] border-mountain-mist-500 p-4 rounded-lg aspect-square'>
           <HandShake />
         </div>
 
@@ -35,7 +35,7 @@ export default function page() {
           {ABOUT_CHARACTERISTICS.map((e) => (
             <div
               key={e.text}
-              className='flex flex-col justify-center items-center gap-2 border-[1px] border-mountain-mist-900 p-4 rounded-lg'
+              className='flex flex-col justify-center items-center gap-2 border-[1px] border-mountain-mist-500 p-4 rounded-lg'
             >
               <e.icon
                 width={'5rem'}

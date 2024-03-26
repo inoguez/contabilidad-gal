@@ -14,7 +14,7 @@ const variants = {
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='flex items-center justify-between backdrop-blur-md bg-[rgba(18, 27, 34, 0.10)] sticky top-0 p-4'>
+    <nav className='flex items-center justify-between   sticky top-0 p-4'>
       <Logo />
       <ul className=' gap-4 grow items-center justify-end hidden md:flex'>
         {NAV_LINKS?.map((e) => (

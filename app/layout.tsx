@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-import { Roboto } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from './components/lib/utils';
 import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { Toaster } from '@/components/ui/sonner';
-const poppins = Roboto({ weight: ['100', '400', '900'], subsets: ['latin'] });
+const poppins = Open_Sans({
+  weight: ['300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Contabilidad GAL',
@@ -23,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={cn(
-          'bg-gradient-to-l from-slate-950  to-mountain-mist-950   flex flex-col gap-1 min-h-screen',
-          poppins.className
-        )}
+        className={cn('   flex flex-col gap-1 min-h-screen', poppins.className)}
       >
         <NextThemesProvider
           attribute='class'
@@ -37,7 +37,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Toaster />
-          <footer className='flex justify-between'>
+          <footer className='flex justify-between p-2'>
             <h3 className=' font-normal text-sm'>
               Copyright © Contabilidad GAL
             </h3>

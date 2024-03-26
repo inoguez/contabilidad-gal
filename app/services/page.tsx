@@ -38,7 +38,7 @@ export default function page() {
             }}
             variants={item}
             key={e.id}
-            className='grid  gap-2 items-start grid-rows-[auto_auto_auto_1fr_auto]   justify-center border-[1px] p-4 rounded-lg border-mountain-mist-900'
+            className=' grid  gap-2 items-start grid-rows-[auto_auto_auto_1fr_auto]   justify-center border-[1px] p-4 rounded-lg border-mountain-mist-500'
           >
             <e.Icon size={128} className='self-center place-self-center ' />
             {/* <Human /> */}
