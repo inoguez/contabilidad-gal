@@ -226,7 +226,10 @@ export default function ContactForm() {
                 return (
                   <FormItem>
                     <FormLabel>Servicio</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select
+                      defaultValue={field.value ? field.value : undefined}
+                      onValueChange={field.onChange}
+                    >
                       <FormControl
                         defaultValue={field.value ? field.value : undefined}
                       >
