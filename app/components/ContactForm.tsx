@@ -226,10 +226,12 @@ export default function ContactForm() {
                 return (
                   <FormItem>
                     <FormLabel>Servicio</FormLabel>
-                    <Select value={field.value} onValueChange={field.onChange}>
-                      <FormControl defaultValue={field.value}>
+                    <Select onValueChange={field.onChange}>
+                      <FormControl
+                        defaultValue={field.value ? field.value : undefined}
+                      >
                         <SelectTrigger className='bg-transparent'>
-                          <SelectValue placeholder='Selecciona un regimen' />
+                          <SelectValue placeholder='Selecciona un servicio' />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
