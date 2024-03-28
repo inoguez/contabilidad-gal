@@ -20,6 +20,7 @@ const variants = {
 };
 export const Navbar = () => {
   const { scrollYProgress } = useScroll();
+  console.log(scrollYProgress);
   const scrollY = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -27,11 +28,21 @@ export const Navbar = () => {
   });
   const [isOpen, setIsOpen] = useState(false);
   const backdropFilter = useTransform(scrollYProgress, (v) => {
-    if (v * 10 > 1) return `blur(${12}px)`;
-    return `blur(${12 * v * 10}px)`;
+    console.log(v.toFixed());
+    if (document.body.scrollHeight > document.body.clientWidth)
+      return `blur(${12 * Number(v.toFixed())}px)`;
+    // `blur(${12 * v * 10}px)`;
+  });
+  const backgroundColor = useTransform(scrollYProgress, (v) => {
+    console.log(v.toFixed());
+    if (document.body.scrollHeight > document.body.clientWidth) {
+      console.log('aaa');
+      return `rgba(18, 27, 34, 0.10)`;
+    }
+    // `blur(${12 * v * 10}px)`;
   });
   const elementStyles = {
-    backgroundColor: 'rgba(18, 27, 34, 0.10)', // Color de fondo con transparencia
+    backgroundColor, // Color de fondo con transparencia
     backdropFilter,
     transition: 'backdrop-filter 75 easeInOut', // Transición suave del filtro de desenfoque
   };
