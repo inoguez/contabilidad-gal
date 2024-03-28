@@ -5,16 +5,42 @@ import { NAV_LINKS } from '../constants/constants';
 import { ContactButton } from './ContactButton';
 import { Divide, Menu } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+  useSpring,
+  useTransform,
+} from 'framer-motion';
 import { ToggleTheme } from './ToggleTheme';
 const variants = {
-  open: { x: 0 },
-  closed: { x: '100%' },
+  open: { width: '100%' },
+  closed: { width: 0 },
 };
 export const Navbar = () => {
+  const { scrollYProgress } = useScroll();
+  const scrollY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   const [isOpen, setIsOpen] = useState(false);
+  const backdropFilter = useTransform(scrollYProgress, (v) => {
+    if (v * 10 > 1) return `blur(${12}px)`;
+    return `blur(${12 * v * 10}px)`;
+  });
+  const elementStyles = {
+    backgroundColor: 'rgba(18, 27, 34, 0.10)', // Color de fondo con transparencia
+    backdropFilter,
+    transition: 'backdrop-filter 75 easeInOut', // Transición suave del filtro de desenfoque
+  };
+
   return (
-    <nav className='flex items-center justify-between   sticky top-0 p-4'>
+    <motion.nav
+      style={elementStyles}
+      className='flex items-center justify-between   sticky top-0 p-4 '
+    >
       <Logo />
       <ul className=' gap-4 grow items-center justify-end hidden md:flex'>
         {NAV_LINKS?.map((e) => (
@@ -43,14 +69,14 @@ export const Navbar = () => {
       {/* <AnimatePresence> */}
       {/* {isOpen && ( */}
       <motion.ul
-        className='bg-mountain-mist-950 flex flex-col gap-2 p-4 items-center justify-center text-2xl'
+        className='absolute h-screen bg-mountain-mist-950 flex flex-col gap-2 items-center justify-center text-2xl overflow-hidden'
         initial={{
           position: 'absolute',
           left: 0,
           right: 0,
           bottom: 0,
           top: 0,
-          x: '100%',
+          width: 0,
         }}
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
@@ -70,6 +96,6 @@ export const Navbar = () => {
       </motion.ul>
       {/* )} */}
       {/* </AnimatePresence> */}
-    </nav>
+    </motion.nav>
   );
 };
