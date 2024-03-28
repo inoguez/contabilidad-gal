@@ -36,12 +36,13 @@ export const metadata: Metadata = {
         url: 'https://contabilidadgal.com/og-image.png', // Must be an absolute URL
         width: 1200,
         height: 630,
+        alt: 'Logotipo de contabilidad gal',
       },
       {
         url: 'https://contabilidadgal.com/og-image.png', // Must be an absolute URL
         width: 1800,
         height: 1600,
-        alt: 'My custom alt',
+        alt: 'Logotipo de contabilidad gal',
       },
     ],
     locale: 'es_MX',
