@@ -16,8 +16,35 @@ const poppins = Open_Sans({
 export const metadata: Metadata = {
   title: 'Contabilidad GAL',
   description: 'Contabilidad para tu negocio',
+  generator: 'Next.js',
+  applicationName: 'Next.js',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Contabilidad', 'GAL', 'Servicios'],
+  authors: [{ name: 'Ian Noguez', url: 'https://inoguez.com' }],
+  creator: 'Ian Noguez',
   icons: {
     icon: '/icon.ico',
+  },
+  openGraph: {
+    title: 'Contabilidad GAL',
+    description: 'Potencia tu éxito Financiero',
+    url: 'https://contabilidadgal.com',
+    siteName: 'Contabilidad GAL',
+    images: [
+      {
+        url: 'https://nextjs.org/og-image.png', // Must be an absolute URL
+        width: 1280,
+        height: 720,
+      },
+      {
+        url: 'https://nextjs.org/og-image.png', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: 'es_MX',
+    type: 'website',
   },
 };
 
