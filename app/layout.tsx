@@ -26,18 +26,19 @@ export const metadata: Metadata = {
     icon: '/icon.ico',
   },
   openGraph: {
-    title: 'Contabilidad GAL',
-    description: 'Potencia tu éxito Financiero',
+    title: 'Contabilidad GAL - Servicios y asesorías financieras y/o contables',
+    description:
+      'Potencia tu éxito Financiero con nuestros servicios contables, alcanza tus metas de tu negocio o personales. Expertos en contabilidad para impulsar tus finanzas. ¡Contáctanos ahora!',
     url: 'https://contabilidadgal.com',
     siteName: 'Contabilidad GAL',
     images: [
       {
-        url: 'https://nextjs.org/og-image.png', // Must be an absolute URL
-        width: 1280,
-        height: 720,
+        url: 'https://contabilidadgal.com/og-image.png', // Must be an absolute URL
+        width: 1200,
+        height: 630,
       },
       {
-        url: 'https://nextjs.org/og-image.png', // Must be an absolute URL
+        url: 'https://contabilidadgal.com/og-image.png', // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: 'My custom alt',
