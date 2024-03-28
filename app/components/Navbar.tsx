@@ -19,41 +19,41 @@ const variants = {
   closed: { width: 0 },
 };
 export const Navbar = () => {
-  const { scrollYProgress } = useScroll();
-  console.log(scrollYProgress);
-  const scrollY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    console.log('Page scroll: ', latest);
   });
   const [isOpen, setIsOpen] = useState(false);
-  const backdropFilter = useTransform(scrollYProgress, (v) => {
-    console.log(v.toFixed());
-    if (document.body.scrollHeight > document.body.clientWidth)
-      return `blur(${12 * Number(v.toFixed())}px)`;
-    // `blur(${12 * v * 10}px)`;
-  });
-  const backgroundColor = useTransform(scrollYProgress, (v) => {
-    console.log(v.toFixed());
-    if (document.body.scrollHeight > document.body.clientWidth) {
-      console.log('aaa');
-      return `rgba(18, 27, 34, 0.10)`;
-    }
-    // `blur(${12 * v * 10}px)`;
-  });
+  const backdropFilter = useTransform(
+    scrollY,
+    [0, 60],
+    [`blur(${0}px)`, `blur(${12}px)`]
+  );
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 60],
+    [`transparent`, `rgba(18, 27, 34, 0.10)`]
+  );
+
   const elementStyles = {
     backgroundColor, // Color de fondo con transparencia
     backdropFilter,
-    transition: 'backdrop-filter 75 easeInOut', // Transición suave del filtro de desenfoque
   };
 
   return (
     <motion.nav
+      transition={{
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
       style={elementStyles}
       className='flex items-center justify-between   sticky top-0 p-4 '
     >
       <Logo />
-      <ul className=' gap-4 grow items-center justify-end hidden md:flex'>
+      <ul
+        style={{ backgroundColor: '' }}
+        className=' gap-4 grow items-center justify-end hidden md:flex'
+      >
         {NAV_LINKS?.map((e) => (
           <li key={e.name}>
             <Link
