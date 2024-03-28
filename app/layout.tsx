@@ -16,6 +16,9 @@ const poppins = Open_Sans({
 export const metadata: Metadata = {
   title: 'Contabilidad GAL',
   description: 'Contabilidad para tu negocio',
+  icons: {
+    icon: '/icon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +31,7 @@ export default function RootLayout({
       <body
         className={cn('   flex flex-col gap-1 min-h-screen', poppins.className)}
       >
+        <link rel='icon' href={'/icon.ico'} sizes='any' />
         <NextThemesProvider
           attribute='class'
           defaultTheme='dark'
