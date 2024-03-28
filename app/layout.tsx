@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     icon: '/icon.ico',
   },
   openGraph: {
-    title: 'Contabilidad GAL - Servicios y asesorías contables',
+    title: 'Contabilidad GAL - Servicios contables y financieros',
     description:
       'Potencia tu éxito Financiero con nuestros servicios contables, alcanza tus metas de tu negocio o personales. Expertos en contabilidad para impulsar tus finanzas. ¡Contáctanos ahora!',
     url: 'https://contabilidadgal.com',
