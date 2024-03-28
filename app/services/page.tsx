@@ -23,7 +23,17 @@ export default function page() {
     <main className=' container mx-auto py-5 grow flex flex-col gap-4 items-center'>
       {/* <Navbar /> */}
       {/* <Hero /> */}
-      <h1 className='text-4xl '>Servicios</h1>
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className='text-4xl '
+      >
+        Servicios
+      </motion.h1>
       <motion.div
         variants={container}
         initial='hidden'
