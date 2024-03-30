@@ -87,6 +87,92 @@ export const Hero = () => {
       <div className='self-center justify-self-center '>
         <motion.svg
           xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          className='lucide lucide-circle-dollar-sign text-vermilion-400 size-80 lg:size-[500px]'
+        >
+          <motion.circle
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1.5, strokeWidth: 1 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: 'mirror',
+              repeatDelay: 1,
+            }}
+            cx='12'
+            cy='12'
+            r='10'
+          />
+          <motion.path
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1.5, strokeWidth: 1 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: 'mirror',
+              repeatDelay: 1,
+            }}
+            d='M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8'
+          />
+          <motion.path
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1.5, strokeWidth: 1 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: 'mirror',
+              repeatDelay: 1,
+            }}
+            d='M12 18V6'
+          />
+        </motion.svg>
+        {/* <motion.svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          className='lucide lucide-dollar-sign text-vermilion-400 size-80 lg:size-[500px]'
+        >
+          <motion.line
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1.5, strokeWidth: 1 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: 'mirror',
+              repeatDelay: 1,
+            }}
+            x1='12'
+            x2='12'
+            y1='2'
+            y2='22'
+          />
+          <motion.path
+            initial={{ pathLength: 0, strokeWidth: 0 }}
+            animate={{ pathLength: 1.5, strokeWidth: 1 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: 'mirror',
+              repeatDelay: 1,
+            }}
+            d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
+          />
+        </motion.svg> */}
+        {/* <motion.svg
+          xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
@@ -223,7 +309,7 @@ export const Hero = () => {
               repeatDelay: 1,
             }}
           />
-        </motion.svg>
+        </motion.svg> */}
       </div>
     </section>
   );
