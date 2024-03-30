@@ -82,7 +82,8 @@ export default function RootLayout({
                 href='https://inoguez.com'
                 className='flex gap-1 text-vermilion-300'
               >
-                Ian Noguez <SquareArrowOutUpRight size={16} />
+                INoguez
+                <SquareArrowOutUpRight size={16} />
               </Link>
             </h3>
           </footer>
