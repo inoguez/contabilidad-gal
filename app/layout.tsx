@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { Toaster } from '@/components/ui/sonner';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const poppins = Open_Sans({
   weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
@@ -86,6 +87,7 @@ export default function RootLayout({
             </h3>
           </footer>
         </NextThemesProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
