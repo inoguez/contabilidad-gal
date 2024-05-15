@@ -8,7 +8,7 @@ export default function Human({ ...props }) {
       stroke='currentColor'
       stroke-width='2'
       stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeLinejoin='round'
       className='lucide lucide-person-standing'
       {...props}
     >

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-
+import { Analytics } from '@vercel/analytics/react';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from './components/lib/utils';
@@ -88,6 +88,7 @@ export default function RootLayout({
             </h3>
           </footer>
         </NextThemesProvider>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>

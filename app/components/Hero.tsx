@@ -94,7 +94,7 @@ export const Hero = () => {
           stroke='currentColor'
           stroke-width='2'
           stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeLinejoin='round'
           className='lucide lucide-circle-dollar-sign text-vermilion-400 size-80 lg:size-[500px]'
         >
           <motion.circle
@@ -142,7 +142,7 @@ export const Hero = () => {
           stroke='currentColor'
           stroke-width='2'
           stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeLinejoin='round'
           className='lucide lucide-dollar-sign text-vermilion-400 size-80 lg:size-[500px]'
         >
           <motion.line
@@ -178,7 +178,7 @@ export const Hero = () => {
           stroke='currentColor'
           stroke-width='1.25'
           stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeLinejoin='round'
           className='lucide lucide-vault  text-vermilion-400 size-80 lg:size-[500px]'
         >
           <motion.rect

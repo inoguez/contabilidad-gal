@@ -99,7 +99,7 @@ export default function ContactForm() {
     }
   };
   return (
-    <Card className='max-w-md w-full bg-transparent border-[1px] rounded-lg border-mountain-mist-900 h-fit'>
+    <Card className='max-w-md w-full bg-transparent border-[1px] rounded-lg border-mountain-mist-900 h-fit !text-vermilion-100'>
       <CardHeader>
         <CardTitle className='text-vermilion-400'>Contacto</CardTitle>
         <CardDescription>Cotiza tu servicio</CardDescription>
@@ -116,7 +116,7 @@ export default function ContactForm() {
               render={({ field }) => {
                 return (
                   <FormItem>
-                    <FormLabel>Nombre completo</FormLabel>
+                    <FormLabel className=''>Nombre completo</FormLabel>
                     <FormControl>
                       <Input
                         className='bg-transparent'
