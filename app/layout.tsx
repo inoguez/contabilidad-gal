@@ -9,6 +9,8 @@ import { SquareArrowOutUpRight } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { Toaster } from '@/components/ui/sonner';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleTagManager } from '@next/third-parties/google';
+
 import Script from 'next/script';
 const poppins = Open_Sans({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -59,18 +61,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <Script
-        src='https://www.googletagmanager.com/gtag/js?id=AW-17176109893'
-        strategy='afterInteractive'
-      />
-      <Script id='google-analytics' strategy='afterInteractive'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17176109893');
-        `}
-      </Script>
       <body
         className={cn('   flex flex-col gap-1 min-h-screen', poppins.className)}
       >
@@ -103,6 +93,7 @@ export default function RootLayout({
         </NextThemesProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleTagManager gtmId='AW-17176109893' />
       </body>
     </html>
   );
